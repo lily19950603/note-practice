@@ -1,0 +1,13 @@
+join 从句使用法师
+1、种类： 内连接（Inner)
+         全外连接（Full Outer)
+         左外连接（Left Outer)
+         右外连接（Right Outer)
+         交叉连接（Cross)
+2、 Inner join
+    内连接基于连接谓词将两张表（如A和B)的列组合在一起，产生新的结果表。（查询公共部分）
+    SELECT <select_list> FROM Table A JOIN Table B ON A.Key=B.key
+3、Left Outer join
+   以左表为基础
+   SELECT <select_list> FROM Table A LEFT JOIN Table B ON A.key=B.key  (包含A表所有内容)
+   SELECT <select_list> FROM Table A LEFT JOIN Table B ON A.key=B.key WHERE B.key IS Not NULL
