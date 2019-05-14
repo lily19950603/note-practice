@@ -4,10 +4,23 @@ join 从句使用法师
          左外连接（Left Outer)
          右外连接（Right Outer)
          交叉连接（Cross)
-2、 Inner join
+2、 join
     内连接基于连接谓词将两张表（如A和B)的列组合在一起，产生新的结果表。（查询公共部分）
     SELECT <select_list> FROM Table A JOIN Table B ON A.Key=B.key
-3、Left Outer join
+3、Left join
    以左表为基础
-   SELECT <select_list> FROM Table A LEFT JOIN Table B ON A.key=B.key  (包含A表所有内容)
-   SELECT <select_list> FROM Table A LEFT JOIN Table B ON A.key=B.key WHERE B.key IS Not NULL
+   SELECT <select_list> FROM Table A LEFT JOIN Table B ON A.key=B.key;  (包含A表所有内容)
+   SELECT <select_list> FROM Table A LEFT JOIN Table B ON A.key=B.key WHERE B.key IS Not NULL;
+ 4、Righr join
+    以右表为基础
+    SELECT <select_list> FROM TableA RIGHT JOIN TableB ON A.key=B.key; （包含B表所有内容）
+    SELECT <select_list> FROM TableA RIGHT JOIN TableB ON A.key=B.key WHERE A.key IS NOT NULL;
+5、Full  join
+   全部连接
+   SELECT <select_list> FROM TableA FULL JOIN TableB ON A.key=B.key; (包含A表和B表所有内容)， 
+   mysql 会报错，解决办法：使用左外连接UNION ALL 右连接
+   SELECT <select_list> FROM TableA LEFT JOIN TableB ON A.key=B.key UNION ALL 
+   SELECT <select_list> FROM TableA RIGHT JOIN TableB ON A.key=B.key; 
+6、Cross join
+   交叉连接又称笛卡尔连接，AxB
+   SELECT <select_list>  FROM TableA CORSS JOIN TableB
