@@ -12,7 +12,7 @@ docs                               文档存放
 jobs                               定时任务
 --bin
 --tasks                            存放定时任务
-manage.py                          启动入口
+manager.py                          启动入口
 release.sh                         系统自己的简单操作脚本，更新代码，重启应用
 requirements.txt                   python 扩展
 uwsgi.ini                          生产环境uwsgi
