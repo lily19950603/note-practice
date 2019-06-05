@@ -1,0 +1,24 @@
+application.py                     封装的Flask的全局变量，包括app,数据等
+common                             存放公用部分
+--libs                             公用方法或者类
+--models                           所有的数据库model
+config                             配置文件
+--base_setting.py                  基础配置
+--develop_setting.py               开发环境
+--local_setting_demo.py            本地开发环境配置demo
+--production_setting.py            生产环境的配置
+docs                               文档存放
+--Mysql.MD                         所有数据库变更记录
+jobs                               定时任务
+--bin
+--tasks                            存放定时任务
+manage.py                          启动入口
+release.sh                         系统自己的简单操作脚本，更新代码，重启应用
+requirements.txt                   python 扩展
+uwsgi.ini                          生产环境uwsgi
+web                                HTTP存放
+--controllers                      所有c层
+--intercepters                     拦截器
+--static                           静态文件
+--templates                        模板
+www.py                             HTTP模块相关初始化
