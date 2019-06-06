@@ -1,0 +1,35 @@
+网上很多关于mysql密码重置的方法，例如：
+cmd 里敲命令: mysqld –skip-grant-tables
+以不输入密码的方式启动MySQL服务，但是这条命令对MYSQL8.0.13，是没有任何作用的。
+经过多次实验，亲测可用方法如下（很简单）。
+
+方法
+1.打开命令窗口cmd，输入命令：net stop mysql，停止MySQL服务
+2.开启跳过密码验证登录的MySQL服务，输入命令：
+
+mysqld --console --skip-grant-tables --shared-memory
+
+
+3.再打开一个新的cmd，输入登录命令：mysql -u root -p，输入密码处直接回车。
+4.密码置为空，命令如下：
+
+use mysql
+update user set authentication_string=''where user='root';
+
+
+5.退出mysql，执行命令：
+
+quit
+
+6.关闭以-console --skip-grant-tables --shared-memory 启动的MySQL服务.(ctrl + z 关闭步骤2即可）
+7. 打开命令框，输入：net start mysql 启动MySQL服务。
+8. 步骤4密码已经置空，所以无密码状态登录MySQL，输入登录命令：mysql -u root -p，输入密码处直接回车。
+9. 设置新密码，输入：
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY '新密码';
+
+
+10.验证密码是否更改成功
+输入quit，退出当前登录，输入登录命令：mysql -u root -p
+输入密码，成功登录，到此，重置密码结束
+
