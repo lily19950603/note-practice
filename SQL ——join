@@ -24,3 +24,4 @@ join 从句使用法师
 6、Cross join
    交叉连接又称笛卡尔连接，AxB
    SELECT <select_list>  FROM TableA CORSS JOIN TableB
+7、分组选择
