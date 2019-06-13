@@ -1,0 +1,18 @@
+Linux 前生 MiniX, 后来由Linus改善发行
+Linux分为内核版本和发行版本
+     内核版本：www.kernel.org  5.1.9 并不是越新越好，稳定最重要
+     发行版本：个性化后的  例如redhad,ubuntu(好看)，centOS,fedoro(全功能)\
+Linux应用：
+     Apache（web 服务器）, Nignix（HTTP和反向代理web 服务器） www.netcraf.com（全球后台服务器的使用情况）
+     嵌入式应用：android(Linux),IOS(系统内核unix)
+Linux严格区分大小写，所有内容以文件形式保存（一切内容皆文件）
+    约定俗成的：
+    压缩包：.gz; .bz2;.tar.bz2;.tgz
+    二进制软件包：.rpm
+    网页文件：.html; .php
+    脚本文件： .sh
+    配置文件： .conf
+字符界面的优势：
+    字符界面占用系统资源更少
+    字符界面减少出错和被攻击的概率
+    
