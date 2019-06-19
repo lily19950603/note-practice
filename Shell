@@ -1,0 +1,8 @@
+1、Shell 是什么
+  *Shell 是一个命令行解释器，它为用户提供了一个向Linux内核发送请求以便运行程序的界面系统级程序，用户可以用Shell 来启动、挂起
+  停止甚至是编写一些程序
+  *Shell 还是一个功能相当强大的编程语言，易编写，易调试，，灵活性较强。Shell是解释执行的脚本语言，在Shell中可以直接调用Linux
+  系统命令
+2、Shell 的分类
+   Bourne Shell:从1979起Unix就开始使用Bourne Shell，主文件名为sh，家族：sh,ksh,Bash(一般用), psh,zsh
+   C Shell:主要在BSD版的Unix中使用，语法和C相似,家族：csh,tcsh
