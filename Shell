@@ -4,5 +4,27 @@
   *Shell 还是一个功能相当强大的编程语言，易编写，易调试，，灵活性较强。Shell是解释执行的脚本语言，在Shell中可以直接调用Linux
   系统命令
 2、Shell 的分类
-   Bourne Shell:从1979起Unix就开始使用Bourne Shell，主文件名为sh，家族：sh,ksh,Bash(一般用), psh,zsh
-   C Shell:主要在BSD版的Unix中使用，语法和C相似,家族：csh,tcsh
+   Bourne Shell:从1979起Unix就开始使用Bourne Shell，主文件名为sh，家族：sh,ksh,Bash(Linux 中的标准shell), psh,zsh
+   C Shell:主要在BSD版的Unix中使用，语法和C相似,家族：csh(Unix),tcsh
+   Bash 与sh 兼容，Linux中还有tcsh, csh (vi /etc/shells)
+3、Shell 执行脚本命令
+   echo 输出命令
+      echo [选项] [输出内容]
+      选项：
+        -e :支持反斜线控制的字符转换  （\a 输出警告音；\b 退格键；\n 换行符； \r 回车键； \t Tab 键；\v 垂直制表； 
+                                      \0nnn 八进制；\xhh 十六进制）规范输出格式
+        [root@localhost~]#echo -e "\e[1;31m 今天星期三 \e[0m"  输出颜色  30m 黑色；31m 红色；32m 绿色；33m 黄色；34m 蓝色
+                                                                        35m 洋红； 36m 青色； 37m 白色
+   第一个脚本
+   [root@localhost~]#vi hello.sh
+   #!/bin/bash
+   # The first program
+   echo -e "\e[1;31m 今天星期三 \e[0m"
+   
+   脚本执行
+      赋予执行权限，直接运行
+        ->chmod 755 hello.sh
+        ./hello.sh
+      通过Bash调用执行脚本
+        bash hello.sh
+   
