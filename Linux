@@ -222,4 +222,5 @@ Linux常用命令
              ls -l =ll
              vi 打开文件
              > 把命令结果写入文件，例如ls > abc,就是把ls查到的文件夹的字符串写入abc文件
+             shitf +q 然后wq退出编辑模式
 
